@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Libexif by Distrotech</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Libexif</h1>
+          <h2></h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/Distrotech/libexif/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/Distrotech/libexif/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/Distrotech/libexif" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <pre><code>                libexif
+                -------
+</code></pre>
+
+<h2>
+<a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>DESCRIPTION</h2>
+
+<p>libexif is a library for parsing, editing, and saving EXIF data. It is
+intended to replace lots of redundant implementations in command-line
+utilities and programs with GUIs.</p>
+
+<h2>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>FEATURES</h2>
+
+<p>libexif supports parsing, editing and saving of EXIF data. In addition, it
+has gettext support. All EXIF tags described in EXIF standard 2.1 (and most
+from 2.2) are supported.  Many maker notes from Canon, Casio, Epson,
+Fuji, Nikon, Olympus, Pentax and Sanyo cameras are also supported.</p>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>REQUIREMENTS</h2>
+
+<p>libexif is written in plain C and does not require any additional library.
+GNU gettext will be used for language translation, if available.</p>
+
+<h2>
+<a name="limitations" class="anchor" href="#limitations"><span class="octicon octicon-link"></span></a>LIMITATIONS</h2>
+
+<p>libexif can only handle some maker notes, and even those not very well. More
+work needs to be done. Note that libmnote has been merged with libexif - it
+is no longer needed.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>USAGE</h2>
+
+<p>We have documented the libexif API using doxygen and are making
+the results available at <a href="http://libexif.sourceforge.net/api/">http://libexif.sourceforge.net/api/</a></p>
+
+<p>The short test programs in the test directory illustrates how to create
+valid EXIF data from scratch, how to save EXIF data and how to load EXIF
+data from data in memory. There are also a few simple example programs
+available in the contrib/examples/ directory.  Don't hesitate to contact
+us at <a href="mailto:libexif-devel@lists.sourceforge.net">libexif-devel@lists.sourceforge.net</a> if you have any questions
+on how to use libexif.</p>
+
+<p>To link to libexif into your own package, we recommend using the
+pkgconfig utility (cf. <a href="http://www.freedesktop.org/wiki/Software/pkg-config/">http://www.freedesktop.org/wiki/Software/pkg-config/</a> For
+your convenience, libexif both provides libexif-uninstalled.pc and
+installs libexif.pc.</p>
+
+<h2>
+<a name="frontends" class="anchor" href="#frontends"><span class="octicon octicon-link"></span></a>FRONTENDS</h2>
+
+<p>Right now, I know of the following frontends to libexif:</p>
+
+<ul>
+<li>exif:     A small command-line utility to show EXIF information in JPEG
+         files (<a href="http://www.sourceforge.net/projects/libexif">http://www.sourceforge.net/projects/libexif</a>).</li>
+<li>gexif:    A GTK+ frontend for editing EXIF data
+         (<a href="http://www.sourceforge.net/projects/libexif">http://www.sourceforge.net/projects/libexif</a>).</li>
+<li>gphoto2:  A command-line frontend to libgphoto2, a library to access a 
+         wide range of digital cameras (<a href="http://www.gphoto.org">http://www.gphoto.org</a>).</li>
+<li>gtkam:    A GTK+ frontend to libgphoto2 (<a href="http://www.gphoto.org">http://www.gphoto.org</a>).</li>
+<li>thirdeye: Digital photos organizer and driver for eComStation
+         (<a href="http://ecomstation.ru/thirdeye">http://ecomstation.ru/thirdeye</a>).</li>
+<li>digikam:  digital photo management application for KDE
+         (<a href="http://www.digikam.org/">http://www.digikam.org/</a>)</li>
+</ul><p>If you would like to migrate your program to use libexif or add EXIF support
+to it, don't hesitate to contact the authors.</p>
+
+<h2>
+<a name="libraries" class="anchor" href="#libraries"><span class="octicon octicon-link"></span></a>LIBRARIES</h2>
+
+<p>I know of the following libraries that use or have been inspired by libexif:</p>
+
+<ul>
+<li>libexif-gtk: library of widgets to help display EXIF tags in GTK
+programs (part of the libexif project)</li>
+<li>pel: PHP-Code (<a href="http://pel.sourceforge.net">http://pel.sourceforge.net</a>)</li>
+</ul><h2>
+<a name="building" class="anchor" href="#building"><span class="octicon octicon-link"></span></a>BUILDING</h2>
+
+<p>It really depends on your environment what to do in order to get libexif
+to build. Building from the source tar ball usually involves the commands:</p>
+
+<p>./configure
+  make
+  sudo make install</p>
+
+<p>When building from source out of CVS, something like the following will be
+necessary:</p>
+
+<p>gettextize
+  mv po/Makevars.template po/Makevars
+  aclocal -I auto-m4 -I m4m
+  autoheader
+  libtoolize --force
+  automake --add-missing
+  autoconf
+  ./configure
+  make</p>
+
+<p>Or, probably just:</p>
+
+<p>autoreconf -i
+  ./configure
+  make</p>
+
+<p>Besides the standard arguments, configure takes several specific to libexif:</p>
+
+<p>--disable-docs          To disable producing any documentation
+  --enable-internal-docs  Build internal code docs if Doxygen available
+  --enable-ship-binaries  To include Windows DLLs in 'make dist'</p>
+
+<p>Certain specialized applications can reduce the size of the libexif
+binary by setting one or both of the following macros in the CPPFLAGS
+environment variable at configure time.  Each one removes certain kinds of
+text strings and constants from the binary.  Applications which need
+to access specific, known EXIF tags and know in advance the meaning of
+their data have no need of those strings and can save considerable space
+by eliminating them.</p>
+
+<p>-DNO_VERBOSE_TAG_STRINGS Names and descriptions of EXIF tags, debug messages,
+                          mandatory EXIF fields (disabling auto-tag-fixup)
+ -DNO_VERBOSE_TAG_DATA    Names of enumerated tag data contents</p>
+
+<h2>
+<a name="internationalization" class="anchor" href="#internationalization"><span class="octicon octicon-link"></span></a>INTERNATIONALIZATION</h2>
+
+<p>The libexif translations are made by volunteers working on their own,
+either directly with the libexif project or through one of two translation
+coordination sites, the Translation Project
+<a href="http://translationproject.org/domain/libexif.html">http://translationproject.org/domain/libexif.html</a> and Launchpad
+<a href="https://translations.edge.launchpad.net/ubuntu/precise/+source/libexif/+pots/libexif-12">https://translations.edge.launchpad.net/ubuntu/precise/+source/libexif/+pots/libexif-12</a>.
+Any updates to language translations coordinated by the Translation Project
+must be made through their web site, but all other languages can be
+updated either through Launchpad (preferred) or by sending updates to
+the libexif developers mailing list directly.  As of this writing, the
+following languages must be updated through the Translation Project:
+cs da de es fr it ja nl pl sk sv uk vi</p>
+
+<p>If you are interested in translating libexif into a new language, we
+recommend that you join one of the above translation groups and take
+advantage of the systems they have built to help you.  A translation
+disclaimer is NOT required for libexif at the Translation Project; by making
+a translation, you agree implicitly to provide it under the same license
+terms as the rest of libexif (LGPL).</p>
+
+<h2>
+<a name="authors" class="anchor" href="#authors"><span class="octicon octicon-link"></span></a>AUTHORS</h2>
+
+<p>libexif has originally been written by Curtis Galloway
+<a href="mailto:curtisg@users.sourceforge.net">curtisg@users.sourceforge.net</a>. Because of the original design not
+supporting editing and saving, Lutz Mueller <a href="mailto:lutz@users.sourceforge.net">lutz@users.sourceforge.net</a>
+rewrote libexif from scratch. Since then, many more people have contributed
+to libexif.</p>
+
+<h2>
+<a name="links" class="anchor" href="#links"><span class="octicon octicon-link"></span></a>LINKS</h2>
+
+<p>Some links you might want to check out if you are interested in further
+information about EXIF.</p>
+
+<ul>
+<li>
+<a href="http://drewnoakes.com/code/exif:">http://drewnoakes.com/code/exif:</a> metadata extraction framework in Java</li>
+<li>
+<a href="http://www.exif.org:">http://www.exif.org:</a> information about the EXIF standard.</li>
+<li>
+<a href="http://www.sno.phy.queensu.ca/%7Ephil/exiftool/TagNames/index.html:">http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/index.html:</a> Looks
+like libexif in Perl. Seems to support a lot of MakerNotes.</li>
+</ul>
+        </section>
+
+        <footer>
+          Libexif is maintained by <a href="https://github.com/Distrotech">Distrotech</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
